@@ -1,1 +1,12 @@
-<p>task-list works!</p>
+<div *ngIf="tasks.length > 0">
+  <div>
+    <ng-container *ngFor="let task of tasks">
+      <!-- Display task item -->
+      <app-task-item [task]="task"></app-task-item>
+    </ng-container>
+  </div>
+</div>
+<div *ngIf="tasks.length === 0">
+  <!-- Display placeholder component -->
+  <app-placeholder></app-placeholder>
+</div>

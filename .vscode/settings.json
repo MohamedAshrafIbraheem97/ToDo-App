@@ -1,0 +1,8 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "prettier.configPath": ".prettierrc",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "notebook.formatOnSave.enabled": true
+}

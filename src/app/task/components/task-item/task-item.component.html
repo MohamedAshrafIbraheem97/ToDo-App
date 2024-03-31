@@ -1,1 +1,10 @@
-<p>task-item works!</p>
+<div class="task-item">
+  <div class="task-info">
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+  </div>
+  <button class="toggle-button" (click)="toggleCompletion()">
+    <i class="fas fa-check-square" *ngIf="task.completed"></i>
+    <i class="far fa-square" *ngIf="!task.completed"></i>
+  </button>
+</div>
