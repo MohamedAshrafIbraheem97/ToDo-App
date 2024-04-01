@@ -1,27 +1,109 @@
-# TodoApp
+# Angular Task Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+This is a simple Angular application for managing tasks. It allows users to view, add, update, and delete tasks.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Display a list of tasks
+- Add a new task
+- Update an existing task
+- Delete a task
 
-## Code scaffolding
+## Supported development features
+- Used lazy loading (so it will be open for expansion)
+- more useable folder strcture (for easier development and to apply single responsibility)
+- bootstrap for faster development and good UI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular
+- Angular CLI 15.0.0
+- Bootstrap
+- Font Awesome
+- ngx toastr
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+1. Clone the repository:
+git clone <repository-url>
+cd angular-task-management
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Install dependencies:
+npm install
 
-## Running end-to-end tests
+3. Run the development server:
+ng serve
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Open your browser and visit `http://localhost:4200` to view the application.
 
-## Further help
+5. Run the backend server on another terminal
+json-server src/assets/db.json --port 3000
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Folder Structure
+```
+src/
+│
+├── app/
+│   ├── core/
+│   │   ├── interceptors/
+│   │   │   └── error.interceptor.ts
+│   │   └── api-endpoints.ts
+│   │
+│   ├── shared/
+│   │   ├── components/
+│   │   │   ├── footer/
+│   │   │   │   ├── footer.component.html
+│   │   │   │   ├── footer.component.scss
+│   │   │   │   └── footer.component.ts
+│   │   │   ├── header/
+│   │   │   │   ├── header.component.html
+│   │   │   │   ├── header.component.scss
+│   │   │   │   └── header.component.ts
+│   │   │   └── placeholder/
+│   │   │       ├── placeholder.component.html
+│   │   │       ├── placeholder.component.scss
+│   │   │       └── placeholder.component.ts
+│   │   └── ...
+│   │
+│   ├── task/
+│   │   ├── components/
+│   │   │   ├── task-form/
+│   │   │   │   ├── task-form.component.html
+│   │   │   │   ├── task-form.component.scss
+│   │   │   │   └── task-form.component.ts
+│   │   │   ├── task-item/
+│   │   │   │   ├── task-item.component.html
+│   │   │   │   ├── task-item.component.scss
+│   │   │   │   └── task-item.component.ts
+│   │   │   └── task-list/
+│   │   │       ├── task-list.component.html
+│   │   │       ├── task-list.component.scss
+│   │   │       └── task-list.component.ts
+│   │   │
+│   │   ├── models/
+│   │   │   └── task.model.ts
+│   │   │
+│   │   └── services/
+│   │       └── task.service.ts
+│   │
+│   ├── app.component.html
+│   ├── app.component.scss
+│   ├── app.component.ts
+│   ├── app.module.ts
+│   └── ...
+│
+├── assets/
+│   └── db.json (local server)
+│
+├── environments/
+│   ├── environment.prod.ts
+│   └── environment.development.ts
+│
+└── ...
+```
+
+
+
+
+
+
