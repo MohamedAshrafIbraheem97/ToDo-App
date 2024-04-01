@@ -1,4 +1,4 @@
-# Angular Task Management Application
+# Angular Task Management Application [<Live Demo>](https://task-management-one-green.vercel.app/task-management/list)
 
 This is a simple Angular application for managing tasks. It allows users to view, add, update, and delete tasks.
 
@@ -25,20 +25,24 @@ This is a simple Angular application for managing tasks. It allows users to view
 ## Getting Started
 
 1. Clone the repository:
-git clone <repository-url>
+```
+git clone [<https://github.com/MohamedAshrafIbraheem97/ToDo-App.git>](https://github.com/MohamedAshrafIbraheem97/ToDo-App.git)
 cd angular-task-management
-
+```
 2. Install dependencies:
+```
 npm install
-
+```
 3. Run the development server:
+```
 ng serve
-
+```
 4. Open your browser and visit `http://localhost:4200` to view the application.
 
 5. Run the backend server on another terminal
+```
 json-server src/assets/db.json --port 3000
-
+```
 ## Folder Structure
 ```
 src/
