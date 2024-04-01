@@ -1,4 +1,4 @@
-# Angular Task Management Application [<Live Demo>](https://task-management-one-green.vercel.app/task-management/list)
+# Angular Task Management Application [Live Demo](https://task-management-one-green.vercel.app/)
 
 This is a simple Angular application for managing tasks. It allows users to view, add, update, and delete tasks.
 
