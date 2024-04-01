@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
 import { TaskService } from '../../service/task.service';
 import { Task } from '../../models/task.model';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-task-list',
@@ -10,7 +10,7 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class TaskListComponent implements OnInit, OnDestroy {
   tasks: Task[] = [];
-  private unsubscribe$ = new Subject<void>();
+  private unsubscribe$: Subject<void> = new Subject<void>();
 
   constructor(private taskService: TaskService) {}
 
@@ -29,5 +29,14 @@ export class TaskListComponent implements OnInit, OnDestroy {
       .subscribe(tasks => {
         this.tasks = tasks;
       });
+  }
+
+  onTaskDeleted(): void {
+    // Refresh task list when a task is deleted
+    this.loadTasks();
+  }
+  onTaskAdded(newTask: Task) {
+    // call the load tasks so we can get the new updated tasks list with id of the last added task
+    this.loadTasks();
   }
 }

@@ -2,4 +2,46 @@
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
+  border-radius: 8px;
+
+  &.completed {
+    text-decoration: line-through;
+  }
+
+  .toggle-button,
+  .delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+
+    i {
+      padding: 0 5px; 
+      color: #555;
+    }
+
+    &:hover {
+      i {
+        color: #333;
+      }
+    }
+  }
+
+  .task-content {
+    flex-grow: 1;
+    margin-left: 10px; // Adjust margin as needed
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      // Add additional styles for the task title
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 14px;
+      // Add additional styles for the task description
+    }
+  }
 }

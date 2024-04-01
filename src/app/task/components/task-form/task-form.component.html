@@ -1,0 +1,11 @@
+<form [formGroup]="taskForm" (ngSubmit)="addTask()" class="row g-2 justify-content-around">
+  <div class="col-12 col-md-4">
+    <input type="text" class="form-control" formControlName="title" placeholder="Enter task title">
+  </div>
+  <div class="col-12 col-md-6">
+    <input type="text" class="form-control" formControlName="description" placeholder="Enter task description">
+  </div>
+  <div class="col-12 col-md-2">
+    <button type="submit" class="btn btn-primary w-100" [disabled]="!taskForm.valid">Add Task</button>
+  </div>
+</form>

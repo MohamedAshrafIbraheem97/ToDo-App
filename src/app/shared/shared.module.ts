@@ -13,7 +13,7 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
     PlaceholderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports:[
     HeaderComponent,

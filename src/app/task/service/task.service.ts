@@ -26,13 +26,13 @@ export class TaskService {
     return this.http.post<Task>(`${this.apiUrl}${API_ENDPOINTS.tasks}`, task);
   }
 
-  updateTask(task: Task): Observable<Task> {
+  updateTask(task: Task): Observable<Task> {    
     const url = `${this.apiUrl}${API_ENDPOINTS.tasks}/${task.id}`;
     return this.http.put<Task>(url, task);
   }
 
-  deleteTask(id: number): Observable<Task> {
+  deleteTask(id: string): Observable<void> {
     const url = `${this.apiUrl}${API_ENDPOINTS.tasks}/${id}`;
-    return this.http.delete<Task>(url);
+    return this.http.delete<void>(url);
   }
 }

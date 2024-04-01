@@ -1,10 +1,15 @@
-<div class="task-item">
-  <div class="task-info">
-    <h2>{{ task.title }}</h2>
-    <p>{{ task.description }}</p>
-  </div>
-  <button class="toggle-button" (click)="toggleCompletion()">
-    <i class="fas fa-check-square" *ngIf="task.completed"></i>
-    <i class="far fa-square" *ngIf="!task.completed"></i>
-  </button>
+<div class="task-item d-flex justify-content-between align-items-center" [ngClass]="{ 'completed': task.completed }">    
+    <div class="d-flex align-items-center">
+        <button class="toggle-button btn btn-link" (click)="toggleCompletion()">
+            <i class="fa fa-square-o" aria-hidden="true" *ngIf="!task.completed"></i>
+            <i class="fa fa-check-square-o" aria-hidden="true" *ngIf="task.completed"></i>
+        </button>
+        <div class="task-content">
+            <h2 class="m-0">{{ task.title }}</h2>
+            <p class="m-0">{{ task.description }}</p>
+        </div>
+    </div>
+    <button class="delete-button btn btn-link" (click)="deleteTask()">
+        <i class="fa fa-trash text-danger" aria-hidden="true"></i>
+    </button>
 </div>
