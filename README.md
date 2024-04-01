@@ -26,7 +26,7 @@ This is a simple Angular application for managing tasks. It allows users to view
 
 1. Clone the repository:
 ```
-git clone [<https://github.com/MohamedAshrafIbraheem97/ToDo-App.git>](https://github.com/MohamedAshrafIbraheem97/ToDo-App.git)
+git clone https://github.com/MohamedAshrafIbraheem97/ToDo-App.git
 cd angular-task-management
 ```
 2. Install dependencies:
